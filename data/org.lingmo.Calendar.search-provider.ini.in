@@ -1,0 +1,6 @@
+[Shell Search Provider]
+Icon=lingmo-calendar
+DesktopId=@appid@.desktop
+BusName=@appid@
+ObjectPath=/org/lingmo/Calendar@profile@/SearchProvider
+Version=2

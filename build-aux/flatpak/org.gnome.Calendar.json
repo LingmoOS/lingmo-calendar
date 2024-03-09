@@ -1,0 +1,181 @@
+{
+    "app-id" : "org.lingmo.Calendar.Devel",
+    "runtime" : "org.lingmo.Platform",
+    "runtime-version" : "master",
+    "sdk" : "org.lingmo.Sdk",
+    "command" : "lingmo-calendar",
+    "tags" : [
+        "devel"
+    ],
+    "finish-args" : [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.login1",
+        "--system-talk-name=org.freedesktop.timedate1",
+        "--talk-name=org.lingmo.ControlCenter",
+        "--talk-name=org.lingmo.Settings",
+        "--talk-name=org.lingmo.evolution.dataserver.AddressBook9",
+        "--talk-name=org.lingmo.evolution.dataserver.Calendar8",
+        "--talk-name=org.lingmo.evolution.dataserver.Sources5",
+        "--talk-name=org.lingmo.evolution.dataserver.Subprocess.Backend.*",
+        "--talk-name=org.lingmo.OnlineAccounts",
+        "--talk-name=org.lingmo.SettingsDaemon.Color"
+    ],
+    "x-run-args" : [
+        "--debug"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+        {
+            "name": "libgeoclue",
+            "buildsystem": "meson",
+            "config-opts" : [
+                "-Denable-backend=false",
+                "-Dlibgeoclue=true",
+                "-Dintrospection=true",
+                "-Dgtk-doc=false"
+            ],
+            "sources": [
+                {
+                    "type" : "git",
+                    "url": "https://gitlab.freedesktop.org/geoclue/geoclue.git"
+                }
+            ]
+        },
+        {
+            "name" : "geocode-glib",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Denable-gtk-doc=false",
+                "-Denable-introspection=false",
+                "-Denable-installed-tests=false",
+                "-Dsoup2=false"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/geocode-glib.git"
+                }
+            ]
+        },
+        {
+            "name" : "libgweather",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Denable_vala=false",
+                "-Dgtk_doc=false",
+                "-Dsoup2=false"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libgweather.git",
+                    "branch" : "main"
+                }
+            ]
+        },
+        {
+            "name" : "libical",
+            "cleanup" : [
+                "/lib/cmake"
+            ],
+            "buildsystem" : "cmake-ninja",
+            "config-opts" : [
+                "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
+                "-DBUILD_SHARED_LIBS=On",
+                "-DICAL_BUILD_DOCS=False",
+                "-DWITH_CXX_BINDINGS=False"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://github.com/libical/libical/releases/download/v3.0.16/libical-3.0.16.tar.gz",
+                    "sha256" : "b44705dd71ca4538c86fb16248483ab4b48978524fb1da5097bd76aa2e0f0c33"
+                }
+            ]
+        },
+        {
+            "name": "intltool",
+            "cleanup": [ "*" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz",
+                    "sha256": "67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd"
+                }
+            ]
+        },
+        {
+            "name" : "gcr",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dgtk_doc=false",
+                "-Dintrospection=false",
+                "-Dvapi=false"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gcr.git",
+                    "branch" : "master"
+                }
+            ]
+        },
+        {
+            "name" : "evolution-data-server",
+            "cleanup": [ "/share/GConf" ],
+            "buildsystem" : "cmake-ninja",
+            "config-opts" : [
+                "-DENABLE_CANBERRA=OFF",
+                "-DENABLE_GOA=OFF",
+                "-DENABLE_DOT_LOCKING=OFF",
+                "-DENABLE_FILE_LOCKING=fcntl",
+                "-DENABLE_GTK=OFF",
+                "-DENABLE_GTK4=ON",
+                "-DENABLE_GOOGLE=OFF",
+                "-DENABLE_VALA_BINDINGS=OFF",
+                "-DENABLE_WEATHER=OFF",
+                "-DWITH_OPENLDAP=OFF",
+                "-DWITH_LIBDB=OFF",
+                "-DENABLE_INTROSPECTION=OFF",
+                "-DENABLE_INSTALLED_TESTS=OFF",
+                "-DENABLE_GTK_DOC=OFF",
+                "-DENABLE_EXAMPLES=OFF",
+                "-DENABLE_OAUTH2_WEBKITGTK4=OFF"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/evolution-data-server.git"
+                }
+            ]
+        },
+        {
+            "name" : "lingmo-calendar",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/lingmo-calendar.git"
+                }
+            ],
+            "config-opts" : [
+                "-Dtracing=true",
+                "-Dprofile=development"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+Source: lingmo-calendar
+Section: lingmo
+Priority: optional
+Maintainer: Lingmo OS Team <team@lingmo.org>
+Build-Depends: appstream-util,
+               debhelper-compat (= 13),
+               dh-sequence-gnome,
+               evolution-data-server <!nocheck>,
+               gsettings-desktop-schemas-dev (>= 3.21.2),
+               libadwaita-1-dev (>= 1.4~beta),
+               libecal2.0-dev (>= 3.45.1),
+               libedataserver1.2-dev (>= 3.45.1),
+               libgeoclue-2-dev (>= 2.4),
+               libedataserverui4-dev (>= 3.45.1),
+               libglib2.0-dev (>= 2.67.5),
+               libgtk-4-dev (>= 4.11.2),
+               libgweather-4-dev (>= 4.1),
+               libical-dev (>= 1.0.1),
+               libsoup-3.0-dev,
+               meson (>= 0.53.0),
+               pkg-config (>= 0.22),
+               xauth <!nocheck>,
+               xvfb <!nocheck>,
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: lingmo-calendar
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         gsettings-desktop-schemas (>= 3.21.2)
+Recommends: evolution-data-server
+Description: Calendar application for Lingmo
+ Lingmo Calendar is a simple and beautiful calendar application designed
+ to perfectly fit the Lingmo desktop. By reusing the components which the
+ Lingmo desktop is build on, Calendar nicely integrates with the Lingmo
+ ecosystem.

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Igor Gnatenko <ignatenko@src.lingmo.org> -->
+<component type="desktop">
+  <id>@appid@.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Calendar</name>
+  <summary>Calendar for Lingmo</summary>
+
+  <description>
+    <p>
+      Lingmo Calendar is a simple and beautiful calendar application designed to perfectly fit the Lingmo
+      desktop. By reusing the components which the Lingmo desktop is built on, Calendar nicely integrates
+      with the Lingmo ecosystem.
+    </p>
+    <p>
+      We aim to find the perfect balance between nicely crafted features and user-centred usability. No
+      excess, nothing missing. You’ll feel comfortable using Calendar, like you’ve been using it for ages!
+    </p>
+  </description>
+
+  <screenshots>
+    <screenshot>
+      <caption>Week view</caption>
+      <image>https://static.lingmo.org/appdata/lingmo-43/calendar/calendar-week.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Month view</caption>
+      <image>https://static.lingmo.org/appdata/lingmo-43/calendar/calendar-month.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Event editor</caption>
+      <image>https://static.lingmo.org/appdata/lingmo-43/calendar/calendar-event.png</image>
+    </screenshot>
+  </screenshots>
+
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>SearchProvider</kudo>
+  </kudos>
+
+  <url type="homepage">https://wiki.lingmo.org/Apps/Calendar</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/lingmo-calendar/issues</url>
+  <url type="donation">https://www.lingmo.org/donate/</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/GNOME/lingmo-calendar</url>
+  <url type="translate">https://l10n.lingmo.org/module/lingmo-calendar/</url>
+  <url type="contribute">https://wiki.lingmo.org/Contribute</url>
+  <project_group>Lingmo</project_group>
+
+  <releases>
+    <release date="2023-10-23" version="45.1" type="stable" />
+    <release date="2023-09-18" version="45.0" type="stable">
+      <description>
+        <ul>
+          <li>New month view with inifinite scrolling support</li>
+          <li>Lots of performance and stability fixes</li>
+          <li>Improved visuals for the sidebar</li>
+          <li>Use modern widgets in various places</li>
+          <li>New and updated translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release date="2023-09-02" version="45~rc" type="development" />
+    <release date="2023-08-18" version="45~beta" type="development" />
+
+    <release date="2023-03-16" version="44.0" type="stable">
+      <description>
+        <ul>
+          <li>Improve sizing of event editor dialog</li>
+          <li>Fix search not working anymore</li>
+          <li>Fix sidebar not opening events</li>
+          <li>New and updated translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release date="2023-03-06" version="44~rc" type="development" />
+    <release date="2023-02-14" version="44~beta" type="development" />
+    <release date="2022-09-03" version="43.1" type="stable" />
+
+    <release date="2022-09-03" version="43.0" type="stable">
+      <description>
+        <ul>
+          <li>Navigation sidebar with weekly events</li>
+          <li>New and updated translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release date="2022-09-03" version="43~rc" type="development" />
+    <release date="2022-08-12" version="43~beta" type="development" />
+    <release date="2022-07-09" version="43~alpha" type="development" />
+
+    <release date="2022-03-18" version="42.0" type="stable">
+      <description>
+        <ul>
+          <li>Port to GTK4</li>
+          <li>Various UI tweaks</li>
+          <li>Much improved timezone handling</li>
+        </ul>
+      </description>
+    </release>
+
+    <release date="2021-09-17" version="41.0" type="stable">
+      <description>
+        <p>
+          Lingmo Calendar 41.0 release brings updated translations, and new event preview
+          popover, and the ability to import events from calendar files.
+        </p>
+      </description>
+    </release>
+
+    <release date="2021-06-03" version="40.2" type="stable">
+      <description>
+        <p>
+          Lingmo Calendar 40.2 release brings updated translations, and a fix to
+          weather forecast not showing.
+        </p>
+      </description>
+    </release>
+
+    <release date="2021-05-11" version="40.1" type="stable">
+      <description>
+        <p>
+          Lingmo Calendar 40.1 release brings stability improvements, updated translations.
+        </p>
+        <p>
+          With this release, the code to fetch the system timezone is more robust, and doesn't
+          crash if for some reason it fails to find the system timezone.
+        </p>
+        <p>
+          A couple of documented keyboard shortcuts weren't working, and with this release they
+          are functional again.
+        </p>
+        <p>
+          Thanks to the new contributors that helped with this release of Lingmo Calendar!
+        </p>
+      </description>
+    </release>
+
+    <release date="2021-03-22" version="40.0" type="stable">
+      <description>
+        <p>
+          Lingmo Calendar 40.0 release brings stability improvements, updated translations,
+          and minor visual updates.
+        </p>
+      </description>
+    </release>
+
+    <release date="2020-09-12" version="3.38.0" type="stable">
+      <description>
+        <p>
+          Lingmo Calendar 3.38 release is here! This release brings stability
+          improvements and more security by preventing data loss when moving
+          events to other calendars.
+        </p>
+      </description>
+    </release>
+
+    <release date="2020-03-06" version="3.36.0" type="stable">
+      <description>
+        <p>Lingmo Calendar 3.36 release is here!</p>
+        <p>
+          This is an exciting release with many improvements and new features:
+        </p>
+        <ul>
+          <li>The event editor dialog was redesigned and reimplemented</li>
+          <li>Minor tweaks to the main interface</li>
+          <li>Many improvements and fixes</li>
+        </ul>
+      </description>
+    </release>
+
+    <release date="2019-09-09" version="3.34.0" type="stable">
+      <description>
+        <p>Lingmo Calendar 3.34 release is here!</p>
+        <p>
+          This release comes with many improvements and new features:
+        </p>
+        <ul>
+          <li>The calendar management dialog was redesigned and reimplemented</li>
+          <li>Discovering online calendars is much more reliable</li>
+          <li>Minor tweaks to the main interface</li>
+        </ul>
+      </description>
+    </release>
+
+    <release date="2019-03-11" version="3.32.0" type="stable">
+      <description>
+        <p>Lingmo Calendar 3.32.0 release is here!</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2018-09-03" version="3.30.0" type="stable">
+      <description>
+        <p>Lingmo Calendar 3.30.0 release is here!</p>
+        <p>The major highlight of this release is the integration with Lingmo's Night Light, making Lingmo Calendar use the dark variant of the theme when Night Light is active.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2018-08-27" version="3.29.92" type="development">
+      <description>
+        <p>This release bring a small improvement and updates many translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2018-07-30" version="3.29.90" type="development">
+      <description>
+        <p>This release brings small improvements, bug fixes, and updates many translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2018-03-05" version="3.27.92" type="development">
+      <description>
+        <p>This is the release candidate version of the next big release of Lingmo Calendar, and it brings a few Flatpak improvements.</p>
+        <p>This release also updates many translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2018-02-12" version="3.27.90" type="development">
+      <description>
+        <p>This is the alpha version of the next big release of Lingmo Calendar, and it brings the following new features and improvements:</p>
+        <ul>
+          <li>Big code refactorings that lead to more stability and ease of maintainership.</li>
+          <li>Follow-up improvements after rewritting the Month view.</li>
+          <li>The Flatpak Nightly builds of Lingmo Calendar now have debugging and tracing enabled by default. This
+            will allow testers to report bugs with more precision.
+          </li>
+          <li>Huge memory leaks were also fixed.</li>
+        </ul>
+        <p>This release also updates many translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-11-15" version="3.27.2" type="development">
+      <description>
+        <p>This release brings the following new features and improvements:</p>
+        <ul>
+          <li>Month view was rewritten, and received a substantial redesign.</li>
+          <li>Events were also redesigned. All-day events look different than timed events.</li>
+          <li>Improvements when adding calendars from files.</li>
+        </ul>
+        <p>This release also updates many translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-08-11" version="3.25.90" type="development">
+      <description>
+        <p>
+          The Lingmo Calendar team is proud to announce the 3.25.90 release of
+          Lingmo Calendar, the third release in the next (3.26) unstable series.
+        </p>
+        <p>This release brings the following new features and improvements:</p>
+        <ul>
+          <li>Add the options to add, modify and remove recurrences from events.</li>
+          <li>Improve Month view by greying out out-of-range days.</li>
+          <li>Completely move to the Meson build system. This allows building Calendar at least 3x faster.</li>
+        </ul>
+        <p>This release also updates many translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-06-19" version="3.25.3" type="development">
+      <description>
+        <p>
+          The Lingmo Calendar team is proud to announce the 3.25.3 release of
+          Lingmo Calendar, the first release in the next (3.26) unstable series.
+          This release brings the first steps to modify and delete recurrent
+          events, as well as many bugfixes.
+        </p>
+        <p>This release also updates translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-04-24" version="3.25.1" type="development">
+      <description>
+        <p>
+          The Lingmo Calendar team is proud to announce the 3.25.1 release of
+          Lingmo Calendar, the first release in the next (3.26) unstable series.
+          This release contains most of the changes that landed for 3.24.1, plus
+          a few translation changes.
+        </p>
+        <p>This release also updates translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-04-24" version="3.24.1" type="stable">
+      <description>
+        <p>
+          The Lingmo Calendar team is proud to announce the 3.24.1 release of
+          Lingmo Calendar! This is a bugfix release that improves a lot the
+          performance and stability of Lingmo Calendar.
+        </p>
+        <p>This release also updates translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-03-20" version="3.24.0" type="stable">
+      <description>
+        <p>
+          The Lingmo Calendar team is proud to announce the 3.24 release of
+          Lingmo Calendar! In this release, users will notice big changes,
+          with the inclusion of the new Week view, various improvements to
+          ranging from various bugfixes, improved keyboard flow for creating
+          events using the quick-add popover, cleanups and much more.
+        </p>
+        <p>This release also updates translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-03-16" version="3.23.92" type="development">
+      <description>
+        <p>
+          In this release, many bugs were fixed in the Week view. Lingmo Calendar is
+          now freeze until the next stable release.
+        </p>
+        <p>This release also updates translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-02-28" version="3.23.91.1" type="development">
+      <description>
+        <p>
+          In this release, a couple of minor bugs were fixed. Lingmo Calendar is
+          gaining stability fixes until the next stable release now.
+        </p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-02-27" version="3.23.91" type="development">
+      <description>
+        <p>
+          In this release, a couple of minor bugs were fixed. Lingmo Calendar is
+          gaining stability fixes until the next stable release now.
+        </p>
+        <p>This release also updates translations, and adds new translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2017-02-14" version="3.23.90" type="development">
+      <description>
+        <p>
+          This release candidate for Lingmo 3.24 adds many new features and improvements. The
+          major highlight is the new Week view, besides the many stability and bugs that
+          were fixed.
+        </p>
+        <ul>
+          <li>The new Week view is here!</li>
+          <li>Lingmo Calendar now has an official Flatpak manifest</li>
+          <li>Keyboard interaction was improved</li>
+        </ul>
+        <p>
+          This release also updates translations, and adds new translations. Lingmo Calendar
+          if officially supported on more then 50 languages now.
+        </p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+
+    <release date="2016-12-19" version="3.22.2" type="stable">
+      <description>
+        <p>
+          This is the third stable release for Lingmo Calendar 3.22, and focuses on
+          bugfixes and stability issues.
+        </p>
+        <ul>
+          <li>Online calendars are now downloaded offline and synchronized</li>
+          <li>Properly draw the current month after scrolling</li>
+          <li>Add an animation on the new month chooser widget</li>
+          <li>Correctly escape strings</li>
+          <li>Plug a memory leak</li>
+        </ul>
+        <p>This release also updates translations, and adds new translations.</p>
+        <p>Thanks to all the contributors that worked on Lingmo Calendar!</p>
+      </description>
+    </release>
+  </releases>
+
+  <update_contact>gbsneto@lingmo.org</update_contact>
+  <translation type="gettext">lingmo-calendar</translation>
+
+  <requires>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+    <display_length compare="ge">small</display_length>
+  </requires>
+
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <display_length compare="ge">medium</display_length>
+  </recommends>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+</component>
+
